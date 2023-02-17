@@ -14,7 +14,7 @@ document.addEventListener("click", function (e) {
 // Messege count //
 var myText = document.getElementById("mytext");
 var result = document.getElementById("hasil");
-var limit = 489;
+var limit = 270;
 result.textContent = 0 + "/" + limit;
 
 myText.addEventListener("input" , function(){
@@ -22,13 +22,13 @@ myText.addEventListener("input" , function(){
   result.textContent = textLength + "/" + limit;
 
   if(textLength > limit){
-    myText.style.borderColor = "#FFFF";
-    result.style.color = "#FFFF";
+    myText.style.borderColor = "#FF2831";
+    result.style.color = "#FF2851";
 
 
   }else{
-    myText.style.borderColor = "##FF0000";
-    result.style.color = "##FF0000";
+    myText.style.borderColor = "#ffff";
+    result.style.color = "#ffff";
   }
 
 });

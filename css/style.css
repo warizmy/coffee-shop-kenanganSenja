@@ -21,6 +21,28 @@ body {
   color: white;
 }
 
+/* Floating Cart */
+.btn-floating {
+  position: fixed;
+  right: 25px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: 0;
+  z-index: 99999;
+  color: white;
+  bottom: 210px;
+  padding-right: 0.1rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.btn-floating:hover {
+  width: auto;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -77,6 +99,43 @@ body {
 
 .navbar .navbar-extra a:hover {
   color: var(--primary);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 15px 2px;
+  border-radius: 60px;
+}
+
+.search-box .search-icon {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.search-box .search-input {
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+}
+
+.search-input .input {
+  border: none;
+  outline: none;
+  background-color: unset;
+  padding: 8px 0px 13px;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-box:hover .search-input {
+  width: 200px;
+  margin-left: 8px;
+}
+
+.search-box .search-icon:hover {
+  color: var(--primary);
+  cursor: pointer;
 }
 
 #hamburger-menu {
@@ -142,6 +201,16 @@ body {
   background-color: var(--primary);
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: .2s;
+}
+
+.hero .content .cta:hover{
+  transform: scale(1.1);
+}
+
+.hero .contact .cta:hover {
+  transition: 0.2s;
+  border-radius: 10px;
 }
 
 /* About Section */
@@ -225,6 +294,7 @@ body {
   flex-wrap: wrap;
   margin-top: 5rem;
   justify-content: center;
+  overflow: hidden;
 }
 
 .menu .row .menu-card {
@@ -233,12 +303,23 @@ body {
 }
 
 .menu .row .menu-card img {
-  border-radius: 10%;
+  border-radius: 20%;
   width: 80%;
+  transition: 0.2s;
+}
+
+.menu-card img:hover {
+  transform: scale(0.9);
+  cursor: pointer;
 }
 
 .menu .row .menu-card .menu-card-title {
   margin-top: 1rem auto 0.5rem;
+}
+
+.menu .row .menu-card .menu-card-title:hover {
+  color: var(--primary);
+  cursor: default;
 }
 
 /* Contact Section */
@@ -266,7 +347,7 @@ body {
   font-size: 1.1rem;
   font-weight: 100;
   line-height: 1.8rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .contact .row {
   display: flex;
@@ -282,7 +363,7 @@ body {
 
 .contact .row form {
   flex: 1 1 45rem;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
@@ -293,7 +374,6 @@ body {
   background-color: var(--bg);
   border: 1px solid #eee;
   padding-left: 2rem;
-  
 }
 
 .contact .row form .input-group input {
@@ -316,7 +396,13 @@ body {
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   font-family: "Poppins", sans-serif;
+  transition: .2s;
 }
+
+.contact .row form .btn:hover{
+  transform: scale(0.9);
+}
+
 
 .areaText {
   padding-top: 1rem;
@@ -333,10 +419,9 @@ textarea {
   background-color: var(--bg);
   border: 1px solid #eee;
   font-family: "Poppins", sans-serif;
-  
 }
 
-.contact .row form .areaText p{
+.contact .row form .areaText p {
   width: 100%;
   text-align: center;
   margin-top: -37px;
@@ -380,11 +465,18 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
+  transition: .2s;
 }
 
 footer .credit a {
-  color: var(--bg);
+  color: white;
   font-weight: 700;
+  
+}
+
+footer .credit a:hover {
+  color: var(--bg);
+  transform: scale(1.1);
 }
 
 /* Media Queries */
@@ -393,6 +485,13 @@ footer .credit a {
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
+  }
+  .contact .row form .areaText p {
+    width: 100%;
+    text-align: center;
+    margin-top: -37px;
+    padding-left: 35rem;
+    font-family: "Poppins", sans-serif;
   }
 }
 
@@ -404,6 +503,10 @@ footer .credit a {
 
   #hamburger-menu {
     display: inline-block;
+  }
+
+  .search-box {
+    display: none;
   }
 
   .navbar .navbar-nav {
@@ -468,6 +571,17 @@ footer .credit a {
   .contact .row form {
     padding-top: 2rem;
   }
+
+  .contact {
+    padding: 7rem 7% 1.4rem;
+  }
+  .contact .row form .areaText p {
+    width: 100%;
+    text-align: center;
+    margin-top: -37px;
+    padding-left: 53rem;
+    font-family: "Poppins", sans-serif;
+  }
 }
 
 /* Mobile */
@@ -477,5 +591,30 @@ footer .credit a {
   }
   .about .row {
     flex-wrap: wrap;
+  }
+
+  .contact {
+    padding: 7rem 2% 1.4rem;
+  }
+  .contact .row form .areaText p {
+    width: 100%;
+    text-align: center;
+    margin-top: -37px;
+    padding-left: 36rem;
+    font-family: "Poppins", sans-serif;
+  }
+  .btn-floating {
+    position: fixed;
+    right: 30px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 0;
+    z-index: 99999;
+    color: white;
+    bottom: 40px;
+    padding-right: 0.1rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   }
 }
