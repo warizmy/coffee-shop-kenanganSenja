@@ -201,10 +201,10 @@ body {
   background-color: var(--primary);
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.hero .content .cta:hover{
+.hero .content .cta:hover {
   transform: scale(1.1);
 }
 
@@ -367,14 +367,15 @@ body {
   text-align: center;
 }
 
-.contact .row form .input-group {
+.contact .row form .input-group  {
   display: flex;
   align-items: center;
   margin-top: 2rem;
   background-color: var(--bg);
   border: 1px solid #eee;
-  padding-left: 2rem;
+  padding-left: 1.2rem;
 }
+
 
 .contact .row form .input-group input {
   width: 100%;
@@ -384,6 +385,28 @@ body {
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
+
+textarea {  
+  resize: none;
+  width: 100%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  background: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#numberOftextlimit{
+  text-align: right;
+  margin-top: 0.2rem;
+  margin-bottom: -2.3rem;
+  margin-left: 30.5rem;
+  font-family: 'Poppins',sans-serif;
+  
+}
+
 
 .contact .row form .btn {
   margin-top: 3rem;
@@ -396,37 +419,11 @@ body {
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   font-family: "Poppins", sans-serif;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.contact .row form .btn:hover{
+.contact .row form .btn:hover {
   transform: scale(0.9);
-}
-
-
-.areaText {
-  margin-top: 2rem;
-}
-
-.contact .row form .areaText textarea {
-  display: flex;
-  width: 100%;
-  min-height: 230px;
-  resize: none;
-  color: white;
-  font-size: 1rem;
-  padding: 20px;
-  background-color: var(--bg);
-  border: 1px solid #eee;
-  font-family: "Poppins", sans-serif;
-}
-
-.contact .row form .areaText p {
-  width: 100%;
-  text-align: center;
-  margin-top: -37px;
-  padding-left: 38rem;
-  font-family: "Poppins", sans-serif;
 }
 
 /* Footer */
@@ -465,13 +462,12 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 footer .credit a {
   color: white;
   font-weight: 700;
-  
 }
 
 footer .credit a:hover {
