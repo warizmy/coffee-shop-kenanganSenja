@@ -30,4 +30,7 @@ myText.addEventListener("input" , function(){
     result.style.color = "#ffff";
   }
 
+
+
+
 });
